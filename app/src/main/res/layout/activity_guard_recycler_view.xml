@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarRecyclerView">
+    tools:context=".GuardRecyclerView">
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/guard_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/carRecycler"
-        tools:listitem="@layout/car_item_view"/>
+        tools:listitem="@layout/guard_item_view"/>
 
 </RelativeLayout>

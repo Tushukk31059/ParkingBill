@@ -20,7 +20,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="100dp"
-    android:layout_marginLeft="100dp"
+    android:layout_marginLeft="120dp"
     android:text="Guard Registration"
     android:id="@+id/btnGuard"
     />
@@ -28,8 +28,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="130dp"
         android:text="Car Registration"
         android:id="@+id/btnCar"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="110dp"
+        android:text="Show Registered Cars"
+        android:id="@+id/btnShowCar"
         />
 </LinearLayout>

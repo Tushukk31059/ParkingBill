@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ParkingBill"
         tools:targetApi="31">
         <activity
+            android:name=".GuardRecyclerView"
+            android:exported="false" />
+        <activity
             android:name=".CarRecyclerView"
             android:exported="false" />
         <activity
