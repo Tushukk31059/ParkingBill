@@ -16,7 +16,7 @@ lateinit var carDb: CarDb
         super.onCreate(savedInstanceState)
         binding= ActivityCarRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        carDb = CarDb.createDatabase(this)
         binding.btnSubmitCar.setOnClickListener {
             val vehicleNum = binding.etVehicleNum.text.toString()
             val vehicleName = binding.etVehicleName.text.toString()

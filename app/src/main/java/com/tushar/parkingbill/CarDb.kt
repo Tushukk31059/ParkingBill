@@ -20,6 +20,15 @@ abstract class CarDb : RoomDatabase() {
                    .addCallback(object :Callback(){
                        override fun onCreate(db: SupportSQLiteDatabase) {
                            super.onCreate(db)
+                           class insertCars: AsyncTask<Void, Void, Void>() {
+                               override fun doInBackground(vararg params: Void?): Void? {
+                                   createDatabase(context).carDao()
+                                       .insertAllVehicles(CarDataClass.addCars())
+                                   return null
+                               }
+                           }
+                           insertCars().execute()
+
                        }
                }).build()
            }

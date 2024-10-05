@@ -25,7 +25,10 @@ class CarRecyclerView : AppCompatActivity() {
 
     private fun getCarsData() {
         array.clear()
-        class getCars : AsyncTask<Void, Void, Void>() {
+        array.add(CarDataClass(vehicle_num="1234", vehicle_name="Toyota", owner_name="John", owner_contact="9876543210", park_in_time="10:00 AM"))
+        array.add(CarDataClass(vehicle_num="5678", vehicle_name="Honda", owner_name="Mike", owner_contact="8765432109", park_in_time="11:00 AM"))
+
+        class GetCars : AsyncTask<Void, Void, Void>() {
             override fun doInBackground(vararg params: Void?):Void?{
                 array.addAll(carDb.carDao().getAllVehicles())
                 val cars = carDb.carDao().getAllVehicles()
@@ -40,6 +43,6 @@ super.onPostExecute(result)
                 carRecyclerAdapter.notifyDataSetChanged()
             }
         }
-        getCars().execute()
+        GetCars().execute()
     }
 }
